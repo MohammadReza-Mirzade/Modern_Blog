@@ -1,0 +1,10 @@
+.Signup{
+    width: 100%;
+    display: flex;
+    height: calc(100vh - 48px);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    align-items: start;
+}
