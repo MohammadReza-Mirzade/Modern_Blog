@@ -1,0 +1,12 @@
+.w100{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*align-items: flex-start;*/
+}
+
+.PhoneInput{
+    margin: 20px;
+    width: 300px;
+}
