@@ -12,8 +12,10 @@ import FormPassword from "./FormPassword";
 import FormAvatar from "./FormAvatar";
 import FormCompleted from "./FormCompleted";
 import validator from 'validator';
-import store from '../../Store/index';
+import Store from '../../Store/index';
 import {changeInfo, changeUser, changePassword, changeAvatar} from "../../Actions";
+import {sessionChecker} from "../../tools/session";
+
 
 
 
@@ -43,12 +45,23 @@ class Signup extends React.Component{
         this.goBackStep = this.goBackStep.bind(this);
     }
 
-    sendData(username, password) {
-        Axios.post(/*'https://api.mocki.io/v1/6910a074*/'/auth/signup', {username: username, password: password}
-        ).then(res => {
+
+    sendData() {
+        const formData = new FormData();
+        Object.entries(Store.getState().field).forEach(entry => {
+            const [key, value] = entry;
+            formData.append(key, value);
+        });
+        Axios.post(/*'https://api.mocki.io/v1/6910a074*/'/auth/signup', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then(res => {
             if (res.data.msg.trim() === 'success') {
                 this.setState({error: ""});
                 this.setState({step: 4});
+            } else if (res.data.msg.trim() === "session") {
+                sessionChecker();
             } else {
                 this.setState({error: res.data.msg});
             }
@@ -60,6 +73,8 @@ class Signup extends React.Component{
         ).then(res => {
             if (res.data.msg.trim() === 'ok') {
                 this.setState({error: ""});
+            } else if (res.data.msg === "session") {
+                this.props.history.push("/dashboard");
             } else {
                 this.setState({error: res.data.msg});
             }
@@ -73,8 +88,7 @@ class Signup extends React.Component{
         if (!field.mobileNumber.trim()) return this.setState({error: 'MobileNumber field is empty.'});
         if (!validator.isMobilePhone(field.mobileNumber, 'fa-IR')) return this.setState({error: "MobileNumber value isn't valid."});
         if (!(field.gender.trim()==="man" || field.gender.trim()==="woman" || field.gender.trim()==="other")) return this.setState({error: "Gender value is empty."});
-        // this.setState({firstName: field.firstName, lastName: field.lastName, mobileNumber: field.mobileNumber});
-        store.dispatch(changeInfo({firstName: field.firstName, lastName: field.lastName, mobileNumber: field.mobileNumber, gender: field.gender}));
+        Store.dispatch(changeInfo({firstName: field.firstName, lastName: field.lastName, mobileNumber: field.mobileNumber, gender: field.gender}));
         this.setState({step: 1, error: ""});
     }
 
@@ -84,8 +98,7 @@ class Signup extends React.Component{
             min: 1,
             max: 30,
         }) || !(validator.isAlphanumeric(field.username.trim(), 'fa-IR') ^ validator.isAlphanumeric(field.username.trim(), 'en-AU'))) return this.setState({error: "Username must consist english letters only or persian letters only and its length must be less than 30 characters."});
-        // if (!this.checkUsername(field.username)) return null;
-        store.dispatch(changeUser({username: field.username}));
+        Store.dispatch(changeUser({username: field.username}));
         this.setState({step: 2, error: ""});
     }
 
@@ -94,17 +107,19 @@ class Signup extends React.Component{
         if (!validator.isLength(field.password, {min: 8, max: 30}) || !validator.isStrongPassword(field.password.trim(), {minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1})) return this.setState({error: "Password length must be between 30 characters and 8 characters."});
         if (!field.repeatPassword.trim()) return this.setState({error:"The Password Repetition field is empty."});
         if (field.password !== field.repeatPassword) return this.setState({error:"The Password and Password Repetition field are not equal."});
-        store.dispatch(changePassword({password: field.password}));
+        Store.dispatch(changePassword({password: field.password}));
         this.setState({step: 3, error: ""});
     }
 
-    validateAvatar(field){
-        store.dispatch(changeAvatar({avatar: field.avatar}));
-        this.sendData(field.username, field.password);
+    async validateAvatar(field){
+        await Store.dispatch(changeAvatar({avatar: field.avatar}));
+        this.sendData();
     }
 
     goBackStep(){
-        this.setState({step: this.state.step-1, error: ""});
+        if (this.state.step > 0) {
+            this.setState({step: this.state.step - 1, error: ""});
+        }
     }
 
 
@@ -115,25 +130,29 @@ class Signup extends React.Component{
             case 2: return <FormPassword clickBackHandler={this.goBackStep} clickHandler={this.validatePassword} error={this.state.error} />
             case 3: return <FormAvatar clickBackHandler={this.goBackStep} clickHandler={this.validateAvatar} error={this.state.error} />
             case 4: return <FormCompleted success={() => {this.props.success()}} />
+            default: return <></>
         }
     }
 
 
     render() {
+        // sessionChecker();
         return(
             <div className='Signup'>
                 {(this.state.error)?[<Alert severity="error" className={style.alert}>
                     <AlertTitle style={{width: 'max-content'}}>Error</AlertTitle>
                     <strong>{this.state.error}</strong>
                 </Alert>]:<div className={style.alert} style={{height: 63.6167+"px"}}></div>}
-                <ParticlesBg type="color" bg={{position: "fixed", zIndex: -1, top:0}} className={style.ParticlesBg}/>
+                <ParticlesBg type="color" bg={{position: "fixed", zIndex: -1, top:0}}/>
                 <Card className={style.Card}>
                     <StepsComponent step={this.state.step} className={style.step} />
                     {this.switchRender()}
                 </Card>
+                <footer style={{width: 100+"%", height: 50+"px", display: "block"}}></footer>
             </div>
         );
     }
+
 }
 
 

@@ -12,7 +12,6 @@ import {
     SettingFilled,
 } from '@ant-design/icons';
 import Axios from "axios";
-
 const { SubMenu } = Menu;
 
 
@@ -30,8 +29,7 @@ class MenuDashboard extends React.Component {
 
     loggingOut = async () => {
         const data = await Axios.get(/*'https://api.mocki.io/v1/6910a074*/'/blogger/logout');
-        if ("success" === data.data.msg) return this.forceUpdate();
-        return alert(data.data.msg);
+        this.props.history.push("/login");
     };
 
 
@@ -56,7 +54,8 @@ class MenuDashboard extends React.Component {
                         <NavLink className={style.NavLink} to="/dashboard/article">Article</NavLink>
                     </Menu.Item>
                     <SubMenu key="sub1" icon={<SettingFilled />} title="Setting">
-                        <Menu.Item key="/userUpdate" ><NavLink className={style.NavLink} to="/dashboard/userUpdate">Change Your Info</NavLink></Menu.Item>
+                        <Menu.Item key="/userUpdateInfo" ><NavLink className={style.NavLink} to="/dashboard/userUpdateInfo">Change Your Info</NavLink></Menu.Item>
+                        <Menu.Item key="/userUpdatePassword" ><NavLink className={style.NavLink} to="/dashboard/userUpdatePassword">Change Your Password</NavLink></Menu.Item>
                     </SubMenu>
                     <Menu.Item key="4" onClick={this.loggingOut} icon={<LogoutOutlined />}>Logout</Menu.Item>
                 </Menu>

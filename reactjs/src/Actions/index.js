@@ -1,4 +1,5 @@
-import { INFO, USER, PASSWORD, AVATAR } from "../Constants/action-types";
+import {INFO, USER, PASSWORD, AVATAR, SESSION} from "../Constants/action-types";
+import Axios from "axios";
 
 function changeInfo(payload) {
     return { type: INFO, payload }
@@ -16,6 +17,10 @@ function changeAvatar(payload) {
     return {type: AVATAR, payload}
 }
 
-export {changeInfo, changeUser, changePassword, changeAvatar};
+async function changeSession() {
+    return {type: SESSION}
+}
+
+export {changeInfo, changeUser, changePassword, changeAvatar, changeSession};
 
 

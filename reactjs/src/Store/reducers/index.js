@@ -1,4 +1,4 @@
-import {AVATAR, INFO, PASSWORD, USER} from "../../Constants/action-types";
+import {AVATAR, INFO, PASSWORD, SESSION, USER} from "../../Constants/action-types";
 
 const initialState = {
     session: false,
@@ -46,6 +46,10 @@ const index = (state = initialState, action) => {
                 avatar: action.payload.avatar,
             }
         };
+        case SESSION: return {
+            ...state,
+            session: !state.session,
+        }
         default: return state;
     }
 }

@@ -4,10 +4,14 @@ import MenuDashboard from './MenuDashboard';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from './Home';
 import UserArticlePage from "./UserArticlePage";
-import UserUpdatePage from "./UserUpdatePage";
+import UserUpdatePasswordPage from "./UserUpdatePasswordPage";
+import UserUpdateInfoPage from "./UserUpdateInfoPage";
+import {sessionChecker} from "../../tools/session";
 
 
 class Dashboard extends React.Component{
+
+
     constructor(props) {
         super(props);
         this.state = {
@@ -22,6 +26,7 @@ class Dashboard extends React.Component{
 
 
     render() {
+        sessionChecker();
         return(
             <div className={style.dashboard}>
                 <Router>
@@ -35,8 +40,11 @@ class Dashboard extends React.Component{
                         <Route path="/dashboard/article">
                             <UserArticlePage page={this.whichPage} />
                         </Route>
-                        <Route path="/dashboard/userUpdate">
-                            <UserUpdatePage page={this.whichPage} />
+                        <Route path="/dashboard/userUpdatePassword">
+                            <UserUpdatePasswordPage page={this.whichPage} />
+                        </Route>
+                        <Route path="/dashboard/userUpdateInfo">
+                            <UserUpdateInfoPage page={this.whichPage} />
                         </Route>
                     </div>
                 </Router>

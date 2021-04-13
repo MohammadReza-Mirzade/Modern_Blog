@@ -1,12 +1,13 @@
 import React from 'react';
 import './UserArticlePage.css';
-import Axios from 'axios';
+import {sessionChecker} from "../../../tools/session";
+// import Axios from 'axios';
 
 class UserArticlePage extends React.Component{
-    constructor(props) {
-        super(props);
 
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
 
     // componentDidMount(){
@@ -18,6 +19,7 @@ class UserArticlePage extends React.Component{
 
 
     render() {
+        sessionChecker();
         return(
             <div>User Article Page</div>
         );

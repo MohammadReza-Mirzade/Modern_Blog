@@ -1,5 +1,5 @@
 import React from 'react';
-import style from  './UserUpdatePage.module.css';
+import style from './UserUpdatePasswordPage.module.css';
 import CardContent from "@material-ui/core/CardContent";
 import TextField from "@material-ui/core/TextField";
 import CardActions from "@material-ui/core/CardActions";
@@ -13,6 +13,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 import {Result} from "antd";
+import {sessionChecker} from "../../../tools/session";
 
 
 const styles  = (them) => ({
@@ -41,7 +42,7 @@ const styles  = (them) => ({
 });
 
 
-class UserUpdatePage extends React.Component{
+class UserUpdatePasswordPage extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -71,6 +72,8 @@ class UserUpdatePage extends React.Component{
         let res = await Axios.put(/*'https://api.mocki.io/v1/6910a074*/'/blogger', {password: oldPassword, newPassword: password});
         if (res.data.msg === 'success') {
             this.setState({open: true});
+        } else if (res.data.msg === "session") {
+            this.props.history.push("/login");
         } else {
             this.setState({error: res.data.msg});
         }
@@ -93,6 +96,7 @@ class UserUpdatePage extends React.Component{
     };
 
     render() {
+        sessionChecker();
         const { classes } = this.props;
         return(
             <div className={classes.container}>
@@ -137,4 +141,4 @@ class UserUpdatePage extends React.Component{
     }
 }
 
-export default withStyles(styles)(UserUpdatePage);
+export default withStyles(styles)(UserUpdatePasswordPage);

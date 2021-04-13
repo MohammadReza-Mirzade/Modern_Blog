@@ -11,6 +11,8 @@ const api = require('./routes/api');
 
 const app = express();
 
+
+
 mongoose.connect(config.mongodbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -63,6 +65,7 @@ app.use(function(err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
+    console.log("res.locals.error: " + res.locals.error + "    \n  err: " + err);
     res.send('error');
 });
 

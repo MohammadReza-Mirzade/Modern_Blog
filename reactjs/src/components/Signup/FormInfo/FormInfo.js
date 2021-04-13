@@ -7,7 +7,6 @@ import TextField from '@material-ui/core/TextField';
 import style from './FormInfo.module.css';
 import { Radio } from 'antd';
 import PhoneInput from 'react-phone-input-2';
-import { connect } from "react-redux";
 import 'react-phone-input-2/lib/material.css';
 import store from "../../../Store";
 
@@ -33,26 +32,7 @@ const useStyles = makeStyles({
 });
 
 
-// const mapStateToProps = (state) => {
-//     return {
-//         firstName: state.firstEffect,
-//         lastname: state.lastName,
-//         mobileNumber: state.mobileNumber,
-//         gender: state.gender
-//     };
-// };
-//
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         btn: () => dispatch({type: "info"}),
-//     }
-// };
-
-
-export default /*connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(*/function FormInfo(props) {
+export default function FormInfo(props) {
     const classes = useStyles();
     const [field, setField] = useState({firstName: store.getState().field.firstName, lastName: store.getState().field.lastName, mobileNumber: store.getState().field.mobileNumber, gender: store.getState().field.gender});
 

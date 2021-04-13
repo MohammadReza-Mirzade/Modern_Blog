@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import {sessionChecker} from "../../../tools/session";
 
 class Home extends React.Component{
     constructor(props) {
@@ -7,6 +8,7 @@ class Home extends React.Component{
     }
 
     render() {
+        sessionChecker();
         return(
             <div>Dashboard</div>
         );

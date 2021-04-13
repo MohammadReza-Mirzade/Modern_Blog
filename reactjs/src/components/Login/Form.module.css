@@ -6,6 +6,7 @@
     margin: 20px;
     width: 60%;
     display: block;
+    z-index: 5;
 }
 
 .w100{
@@ -13,5 +14,4 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /*align-items: flex-start;*/
 }

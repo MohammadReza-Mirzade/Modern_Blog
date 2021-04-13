@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -47,9 +47,9 @@ export default function Form(props) {
         return props.clickHandler(field.userName, field.password);
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
         if((props.error) && (props.error !== 'success')) setError(props.error);
-    });
+    }, [props.error]);
 
     return (
         <div className={style.w100}>
@@ -68,6 +68,7 @@ export default function Form(props) {
                     </Button>
                 </CardActions>
             </Card>
+            <footer style={{width: 100+"%", height: 50+"px", display: "block"}}></footer>
         </div>
     );
 }

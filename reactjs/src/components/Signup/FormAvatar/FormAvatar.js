@@ -37,21 +37,29 @@ const useStyles = makeStyles({
 
 export default function FormAvatar(props) {
     const classes = useStyles();
-    const [field] = useState({userName: store.getState().field.username});
+    const [field, setField] = useState({userName: store.getState().field.username});
     const [open, setOpen] = useState(false);
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState("");
     let editor1 = null;
 
     const setEditorRef = (editor) => (editor1 = editor);
 
-    const onClickSave = () => {
+    const onClickSave = async () => {
+
         if (editor1) {
-            console.log(image);
             const canvas = editor1.getImage().toDataURL();
             // const canvasScaled = editor1.getImageScaledToCanvas();
             fetch(canvas)
                 .then(res => res.blob())
-                .then(blob => (setImage(window.URL.createObjectURL(blob))));
+                .then(blob => {
+                    // const blob = await fetch(url).then(r => r.blob());
+                    setImage(window.URL.createObjectURL(blob));
+                    const extension = blob.type.split('/')[1];
+                    const imageFile = new File([blob], `${Date.now()}.${extension}`, {
+                        type: blob.type,
+                    });
+                    setField(prevField => ({...prevField, avatar: imageFile}))
+                });
             setOpen(false);
         }
     }
@@ -61,8 +69,7 @@ export default function FormAvatar(props) {
     }
 
     const handleDrop = (dropped) => {
-        setImage(dropped[0]);
-        console.log(dropped);
+        setField(prevField => ({...prevField, avatar: dropped[0]}));
     }
 
 
@@ -90,7 +97,7 @@ export default function FormAvatar(props) {
                                 <div {...getRootProps()}>
                         <AvatarEditor
                             ref={setEditorRef}
-                            image={image}
+                            image={field.avatar}
                             width={250}
                             height={250}
                             border={50}
@@ -106,10 +113,10 @@ export default function FormAvatar(props) {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">
+                    <Button className={style.button} onClick={handleClose} color="primary">
                         Cancel
                     </Button>
-                    <Button onClick={onClickSave} color="primary">
+                    <Button className={style.button} onClick={onClickSave} color="primary">
                         Set Avatar
                     </Button>
                 </DialogActions>
@@ -122,10 +129,10 @@ export default function FormAvatar(props) {
                     <div style={{display: "flex", justifyContent: "space-around"}}>
                         <img src={image} className={style.avatar} alt=""/>
                         <div style={{alignSelf: "center"}}>
-                            <Button className={style.button} onClick={() => {}} variant="contained" color="primary">
+                            <Button style={{margin: 10+"px"}} className={style.button} onClick={() => {}} variant="contained" color="primary">
                                 Default Avatar
                             </Button>
-                            <Button className={style.button} onClick={() => {setOpen(true)}} variant="contained" color="primary">
+                            <Button style={{margin: 10+"px"}} className={style.button} onClick={() => {setOpen(true);}} variant="contained" color="primary">
                                 Choose Avatar
                             </Button>
                         </div>
@@ -133,7 +140,7 @@ export default function FormAvatar(props) {
 
                 </CardContent>
                 <CardActions style={{width: 100+"%", display: "flex", justifyContent: "end"}}>
-                    <Button className={classes.btn} onClick={() => {props.clickBackHandler(field)}} variant="contained" color="primary">
+                    <Button className={classes.btn} onClick={() => {props.clickBackHandler()}} variant="contained" color="primary">
                         PREVIOUS
                     </Button>
                     <Button className={classes.btn} onClick={() => {props.clickHandler(field)}} variant="contained" color="primary">

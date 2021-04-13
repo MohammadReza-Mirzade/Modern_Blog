@@ -50,7 +50,7 @@ export default function FormPassword(props) {
                     <TextField onChange={getRepeatPassword} defaultValue={field.repeatPassword} type="password" className={classes.input} id="repeat-password" label="Password Repetition" variant="outlined" />
                 </CardContent>
                 <CardActions style={{width: 100+"%", display: "flex", justifyContent: "end"}}>
-                    <Button className={classes.btn} onClick={() => {props.clickBackHandler(field)}} variant="contained" color="primary">
+                    <Button className={classes.btn} onClick={() => {props.clickBackHandler()}} variant="contained" color="primary">
                         PREVIOUS
                     </Button>
                     <Button className={classes.btn} onClick={() => {props.clickHandler(field)}} variant="contained" color="primary">

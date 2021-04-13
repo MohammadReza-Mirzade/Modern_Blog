@@ -1,16 +1,14 @@
 import style from './Home.module.css';
 import React from 'react';
-import CardContent from '@material-ui/core/CardContent';
-import Card from '@material-ui/core/Card';
 import ParticlesBg from "particles-bg";
+import {sessionChecker} from "../../tools/session";
 
 
 class Home extends React.Component{
-    constructor(props) {
-        super(props);
-    }
+
 
     render() {
+        sessionChecker();
         return(
             <div className={style.Home}>
                 <ParticlesBg type="cobweb" bg={true}/>
