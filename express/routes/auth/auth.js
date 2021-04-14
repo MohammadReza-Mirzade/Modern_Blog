@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../../models/Blogger');
 const validator = require('validator');
+const path = require("path");
 const mv = require("mv");
 const formidableMiddleware = require('express-formidable');
 
@@ -28,9 +29,10 @@ router.post('/signup', formidableMiddleware(), (req, res) => {
 
         const avatarFile = Date.now() + "-" + req.files.avatar.name;
         const tempPath = req.files.avatar.path ;
-        const targetPath = "../../../file/images/avatars/" + avatarFile;
+        const targetPath = path.join(__dirname, "../../../file/images/avatars/" + avatarFile);
 
-        mv(tempPath, targetPath, err => {
+        mv(tempPath, targetPath, {mkdirp: true},err => {
+            console.log(targetPath);
             if (err) return res.json({msg: "Internal Server Error."});
 
             new User({

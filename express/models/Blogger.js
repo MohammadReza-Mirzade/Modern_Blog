@@ -32,8 +32,9 @@ const BloggerSchema = new Schema({
         maxlength:30
     },
     gender:{
-        type: Boolean,
-        required: true
+        type: String,
+        required: true,
+        enum: ['man', 'woman', 'other'],
     },
     mobileNumber:{
         ...defaultStringSchema,

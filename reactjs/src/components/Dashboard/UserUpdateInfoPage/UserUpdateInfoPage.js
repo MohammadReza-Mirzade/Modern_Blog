@@ -77,6 +77,7 @@ class UserUpdatePasswordPage extends React.Component{
     };
 
      sendData = async (firstName, lastName, gender, mobileNumber) => {
+         console.log(firstName);
         let res = await Axios.put(/*'https://api.mocki.io/v1/6910a074*/'/blogger', {firstName: firstName, lastName: lastName, gender: gender, mobileNumber: mobileNumber});
         if (res.data.msg === 'success') {
             this.setState({open: true});
@@ -87,16 +88,16 @@ class UserUpdatePasswordPage extends React.Component{
         }
     }
 
-    validate(){
-         if (!this.state.field.firstName) return this.setState({error: 'FirstName field is empty.'});
-         if (!this.state.field.firstName.trim()) return this.setState({error: 'FirstName field is empty.'});
-         if (!this.state.field.lastName) return this.setState({error: 'FirstName field is empty.'});
-         if (!this.state.field.lastName.trim()) return this.setState({error: 'LastName field is empty.'});
-         if (!this.state.field.mobileNumber) return this.setState({error: 'FirstName field is empty.'});
-         if (!this.state.field.mobileNumber.trim()) return this.setState({error: 'MobileNumber field is empty.'});
-         if (!validator.isMobilePhone(this.state.field.mobileNumber, 'fa-IR')) return this.setState({error: "MobileNumber value isn't valid."});
-         if (!(this.state.field.gender.trim()==="man" || this.state.field.gender.trim()==="woman" || this.state.field.gender.trim()==="other")) return this.setState({error: "Gender value is empty."});
-         return this.sendData(this.state.field.firstName, this.state.field.lastName, this.state.field.gender, this.state.field.mobileNumber);
+    validate(field){
+         if (!field.firstName) return this.setState({error: 'FirstName field is empty.'});
+         if (!field.firstName.trim()) return this.setState({error: 'FirstName field is empty.'});
+         if (!field.lastName) return this.setState({error: 'FirstName field is empty.'});
+         if (!field.lastName.trim()) return this.setState({error: 'LastName field is empty.'});
+         if (!field.mobileNumber) return this.setState({error: 'FirstName field is empty.'});
+         if (!field.mobileNumber.trim()) return this.setState({error: 'MobileNumber field is empty.'});
+         if (!validator.isMobilePhone(field.mobileNumber, 'fa-IR')) return this.setState({error: "MobileNumber value isn't valid."});
+         if (!(field.gender.trim()==="man" || field.gender.trim()==="woman" || field.gender.trim()==="other")) return this.setState({error: "Gender value is empty."});
+         return this.sendData(field.firstName, field.lastName, field.gender, field.mobileNumber);
     }
 
     Transition = React.forwardRef(function Transition(props, ref) {
@@ -154,7 +155,7 @@ class UserUpdatePasswordPage extends React.Component{
                         </Radio.Group>
                     </CardContent>
                     <CardActions>
-                        <Button className={classes.btn} onClick={this.validate} variant="contained" color="primary">
+                        <Button className={classes.btn} onClick={() => {this.validate(this.state.field)}} variant="contained" color="primary">
                             CHANGE
                         </Button>
                     </CardActions>

@@ -28,10 +28,28 @@ router.put('/', (req, res, next) => {
                 });
             });
         });
-    } else if (req.body.firstName || req.body.lastName || req.body.gender || req.body.mobileNumber) {
+    } else /*if (req.body.firstName || req.body.lastName || req.body.gender || req.body.mobileNumber)*/ {
+        Blogger.findOne({_id: req.session.user._id}, (err, blogger) => {
+            if (err) {
+                console.log(err);
+                return res.json({msg: 'Internal Server Error.'});
+            }
 
-    } else {
-        next();
+            Blogger.updateOne({_id: req.session.user._id}, {
+                $set: {
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName,
+                    mobileNumber: req.body.mobileNumber,
+                    gender: req.body.gender
+                }
+            }, (err) => {
+                if (err) {
+                    console.log(err);
+                    return res.json({msg: "Internal Server Error."});
+                }
+                return res.json({msg: "success"});
+            });
+        });
     }
 });
 

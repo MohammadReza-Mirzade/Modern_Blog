@@ -46,11 +46,11 @@ export default function FormInfo(props) {
 
     function getMobileNumber(phone) {
         setField(prevField => ({...prevField, mobileNumber: phone}));
-    }
+    };
 
     function getGender(event) {
         setField(prevField => ({...prevField, gender: event.target.value}));
-    }
+    };
 
 
     return (
