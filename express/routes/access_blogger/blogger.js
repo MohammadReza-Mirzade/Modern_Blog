@@ -4,6 +4,7 @@ const Blogger = require('../../models/Blogger');
 const bcrypt = require('bcrypt')
 const path = require('path');
 const formidableMiddleware = require('express-formidable');
+const validator = require("validator");
 
 router.put('/', (req, res, next) => {
     if(req.body.password && req.body.newPassword) {
@@ -29,6 +30,12 @@ router.put('/', (req, res, next) => {
             });
         });
     } else /*if (req.body.firstName || req.body.lastName || req.body.gender || req.body.mobileNumber)*/ {
+
+        if (!req.body.firstName.trim()) return res.json({msg: "FirstName field is empty."});
+        if (!req.body.lastName.trim()) return res.json({msg: "LastName field is empty."});
+        if (!validator.isMobilePhone(req.body.mobileNumber, 'fa-IR')) return res.json({msg: "MobileNumber value isn't valid."});
+        if (!(req.body.gender === 'man' || req.body.gender === 'woman' || req.body.gender === "other")) return res.json({msg: "Gender value isn't valid."});
+
         Blogger.findOne({_id: req.session.user._id}, (err, blogger) => {
             if (err) {
                 console.log(err);

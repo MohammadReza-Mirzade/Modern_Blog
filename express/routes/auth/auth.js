@@ -16,7 +16,7 @@ router.post('/signup', formidableMiddleware(), (req, res) => {
     if (!validator.isLength(req.fields.username.trim() , {min:1, max:30}) || !(validator.isAlphanumeric(req.fields.username.trim(), 'fa-IR') ^ validator.isAlphanumeric(req.fields.username.trim(), 'en-AU'))) return res.json({msg: "Username must consist english letters only or persian letters only and its length must be less than 30 characters."});
     if (!validator.isLength(req.fields.password, {min: 8, max: 30}) || !validator.isStrongPassword(req.fields.password.trim(), {minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1})) return res.json({msg: "Password length must be between 30 characters and 8 characters."});
     if (!validator.isMobilePhone(req.fields.mobileNumber, 'fa-IR')) return res.json({msg: "MobileNumber value isn't valid."});
-    if (!(req.fields.gender === 'man' || req.fields.gender === 'woman')) return res.json({msg: "Gender value isn't valid."});
+    if (!(req.fields.gender === 'man' || req.fields.gender === 'woman' || req.fields.gender === "other")) return res.json({msg: "Gender value isn't valid."});
 
 
     User.findOne({username: req.fields.username.trim()}, (err, existUser) => {
