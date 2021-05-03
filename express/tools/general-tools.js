@@ -1,4 +1,3 @@
-const path = require('path');
 const generalTools = {};
 
 generalTools.notFound = function(req, res){
@@ -14,12 +13,12 @@ generalTools.sessionChecker = function(req, res) {
 };
 
 generalTools.sessionFalse = function (req, res, next) {
-    if (req.cookies.user_sid && req.session.user) return res.redirect("/dashboard");
+    if (req.cookies.user_sid && req.session.user) return res.json({msg: "session"});
     return next();
 }
 
 generalTools.sessionBlogger = function (req, res, next) {
-    if (!(req.cookies.user_sid && req.session.user)) return res.redirect("/login");
+    if (!(req.cookies.user_sid && req.session.user)) return res.json({msg: "session"});
     return next();
 };
 

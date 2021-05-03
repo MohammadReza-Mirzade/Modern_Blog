@@ -38,9 +38,6 @@ app.use(session({
 
 app.use((req, res, next) => {
 
-    console.log(req.session);
-    console.log(req.cookies.user_sid);
-
 
     if (req.cookies.user_sid && !req.session.user) {
         res.clearCookie('user_sid')

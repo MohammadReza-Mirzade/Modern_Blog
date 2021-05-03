@@ -87,6 +87,7 @@ export default function FormAvatar(props) {
                 <DialogTitle id="alert-dialog-slide-title">Choose Your Avatar.</DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-slide-description">
+                        <h2>Drop image in the bottom box.</h2>
                         <Dropzone
                             onDrop={handleDrop}
                             noClick

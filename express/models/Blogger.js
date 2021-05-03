@@ -18,7 +18,8 @@ const BloggerSchema = new Schema({
         maxlength: 30
     },
     avatar: {
-        ...defaultStringSchema,
+        type: String,
+        trim: true,
     },
     firstName:{
         ...defaultStringSchema,
@@ -38,10 +39,6 @@ const BloggerSchema = new Schema({
     },
     mobileNumber:{
         ...defaultStringSchema,
-    },
-    lastUpdate:{
-        type: Date,
-        default: Date.now()
     },
     role:{
         type: String,

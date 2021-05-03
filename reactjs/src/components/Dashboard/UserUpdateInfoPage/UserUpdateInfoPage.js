@@ -124,9 +124,9 @@ class UserUpdatePasswordPage extends React.Component{
                     <DialogTitle id="alert-dialog-slide-title">
                         <Result
                             status="success"
-                            title="Your password has been updated."
+                            title="Your info has been updated."
                         />
-                        </DialogTitle>
+                    </DialogTitle>
                     <DialogActions>
                         <Button onClick={this.handleClose} color="primary">
                             Ok

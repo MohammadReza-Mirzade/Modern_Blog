@@ -69,16 +69,7 @@ class Signup extends React.Component{
     }
 
     checkUsername(username){
-        Axios.post(/*'https://api.mocki.io/v1/6910a074*/'/auth/checkUsername', {username: username}
-        ).then(res => {
-            if (res.data.msg.trim() === 'ok') {
-                this.setState({error: ""});
-            } else if (res.data.msg === "session") {
-                this.props.history.push("/dashboard");
-            } else {
-                this.setState({error: res.data.msg});
-            }
-        });
+
     }
 
 
@@ -93,18 +84,28 @@ class Signup extends React.Component{
     }
 
     validateUsername(field) {
-        if (!field.username.trim()) return this.setState({error: "The UserName field is empty."});
-        if (!validator.isLength(field.username.trim(), {
-            min: 1,
-            max: 30,
-        }) || !(validator.isAlphanumeric(field.username.trim(), 'fa-IR') ^ validator.isAlphanumeric(field.username.trim(), 'en-AU'))) return this.setState({error: "Username must consist english letters only or persian letters only and its length must be less than 30 characters."});
-        Store.dispatch(changeUser({username: field.username}));
-        this.setState({step: 2, error: ""});
+        Axios.post(/*'https://api.mocki.io/v1/6910a074*/'/auth/checkUsername', {username: field.username}
+        ).then(res => {
+            if (res.data.msg.trim() === 'ok') {
+                this.setState({error: ""});
+                if (!field.username.trim()) return this.setState({error: "The UserName field is empty."});
+                if (!validator.isLength(field.username.trim(), {
+                    min: 1,
+                    max: 30,
+                }) || !(validator.isAlphanumeric(field.username.trim(), 'fa-IR') ^ validator.isAlphanumeric(field.username.trim(), 'en-AU'))) return this.setState({error: "Username must consist english letters only or persian letters only and its length must be less than 30 characters."});
+                Store.dispatch(changeUser({username: field.username}));
+                this.setState({step: 2, error: ""});
+            } else if (res.data.msg === "session") {
+                this.props.history.push("/dashboard");
+            } else {
+                this.setState({error: res.data.msg});
+            }
+        });
     }
 
     validatePassword(field){
         if (!field.password.trim()) return this.setState({error:"The Password field is empty."});
-        if (!validator.isLength(field.password, {min: 8, max: 30}) || !validator.isStrongPassword(field.password.trim(), {minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1})) return this.setState({error: "Password length must be between 30 characters and 8 characters."});
+        if (!validator.isLength(field.password, {min: 8, max: 30})) return this.setState({error: "Password length must be between 30 characters and 8 characters."});
         if (!field.repeatPassword.trim()) return this.setState({error:"The Password Repetition field is empty."});
         if (field.password !== field.repeatPassword) return this.setState({error:"The Password and Password Repetition field are not equal."});
         Store.dispatch(changePassword({password: field.password}));

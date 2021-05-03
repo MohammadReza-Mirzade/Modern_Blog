@@ -50,9 +50,15 @@ class MenuDashboard extends React.Component {
                     <Menu.Item key="/" icon={<DesktopOutlined />}>
                         <NavLink className={style.NavLink} to="/dashboard">Dashboard</NavLink>
                     </Menu.Item>
-                    <Menu.Item key="/article" icon={<ContainerOutlined />}>
-                        <NavLink className={style.NavLink} to="/dashboard/article">Article</NavLink>
-                    </Menu.Item>
+
+                    <SubMenu key="sub1" icon={<SettingFilled />} title="Article">
+                        <Menu.Item key="/myArticles" icon={<ContainerOutlined />}>
+                            <NavLink className={style.NavLink} to="/dashboard/myArticles">My Articles</NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="/newArticle" >
+                            <NavLink className={style.NavLink} to="/dashboard/newArticle">New Article</NavLink>
+                        </Menu.Item>
+                    </SubMenu>
                     <SubMenu key="sub1" icon={<SettingFilled />} title="Setting">
                         <Menu.Item key="/userUpdateInfo" ><NavLink className={style.NavLink} to="/dashboard/userUpdateInfo">Change Your Info</NavLink></Menu.Item>
                         <Menu.Item key="/userUpdatePassword" ><NavLink className={style.NavLink} to="/dashboard/userUpdatePassword">Change Your Password</NavLink></Menu.Item>

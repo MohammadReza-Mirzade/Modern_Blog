@@ -19,11 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d68c009-7cf6-4bd1-be0e-2a6ed508f3c3" name="Default Changelist" comment="fix signup.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5d68c009-7cf6-4bd1-be0e-2a6ed508f3c3" name="Default Changelist" comment="update validation.">
+      <change afterPath="$PROJECT_DIR$/reactjs-admin/.idea/reactjs-admin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactjs/src/components/Dashboard/UserNewAritclePage/UserNewArticlePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactjs/src/components/Dashboard/UserNewAritclePage/UserNewArticlePage.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactjs/src/components/Dashboard/UserNewAritclePage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/express/routes/access_blogger/blogger.js" beforeDir="false" afterPath="$PROJECT_DIR$/express/routes/access_blogger/blogger.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/express/routes/auth/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/express/routes/auth/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/components/Dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/components/Dashboard/MenuDashboard/MenuDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/components/Dashboard/MenuDashboard/MenuDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/components/Dashboard/UserUpdateInfoPage/UserUpdateInfoPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/components/Dashboard/UserUpdateInfoPage/UserUpdateInfoPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/components/Dashboard/UserUpdateInfoPage/UserUpdateInfoPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/components/Dashboard/UserUpdateInfoPage/UserUpdateInfoPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/components/Signup/FormAvatar/FormAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/components/Signup/FormAvatar/FormAvatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/components/Signup/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/components/Signup/Signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +63,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/reactjs/public" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -104,7 +118,11 @@
       <workItem from="1618047452592" duration="4038000" />
       <workItem from="1618056177842" duration="30690000" />
       <workItem from="1618296760679" duration="26307000" />
-      <workItem from="1618922178576" duration="311000" />
+      <workItem from="1618922178576" duration="446000" />
+      <workItem from="1619071521076" duration="10285000" />
+      <workItem from="1619339283933" duration="2041000" />
+      <workItem from="1619503813959" duration="4024000" />
+      <workItem from="1619601783569" duration="5743000" />
     </task>
     <task id="LOCAL-00001" summary="move hw18 files to project.">
       <created>1616837294639</created>
@@ -134,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618391192926</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update validation.">
+      <created>1618922606071</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618922606071</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,9 +182,14 @@
     <MESSAGE value="Adding Files To VCS." />
     <MESSAGE value="complete update" />
     <MESSAGE value="fix signup." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix signup." />
+    <MESSAGE value="update validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="update validation." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="438" y="184" key="#Notifications" timestamp="1619504192609">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="438" y="184" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1619504192609" />
     <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617967994972">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -180,74 +210,78 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="148" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618076829510" />
-    <state width="1345" height="197" key="GridCell.Tab.0.bottom" timestamp="1618403874891">
+    <state width="1345" height="197" key="GridCell.Tab.0.bottom" timestamp="1619147099736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618403874891" />
-    <state width="1345" height="197" key="GridCell.Tab.0.center" timestamp="1618403874890">
+    <state width="1345" height="197" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619147099736" />
+    <state width="1345" height="197" key="GridCell.Tab.0.center" timestamp="1619147099735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618403874890" />
-    <state width="1345" height="197" key="GridCell.Tab.0.left" timestamp="1618403874890">
+    <state width="1345" height="197" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619147099735" />
+    <state width="1345" height="197" key="GridCell.Tab.0.left" timestamp="1619147099735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618403874890" />
-    <state width="1345" height="197" key="GridCell.Tab.0.right" timestamp="1618403874891">
+    <state width="1345" height="197" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619147099735" />
+    <state width="1345" height="197" key="GridCell.Tab.0.right" timestamp="1619147099735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618403874891" />
-    <state width="1345" height="197" key="GridCell.Tab.1.bottom" timestamp="1618403974711">
+    <state width="1345" height="197" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619147099735" />
+    <state width="1345" height="197" key="GridCell.Tab.1.bottom" timestamp="1619147099736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618403974711" />
-    <state width="1345" height="197" key="GridCell.Tab.1.center" timestamp="1618403974711">
+    <state width="1345" height="197" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619147099736" />
+    <state width="1345" height="197" key="GridCell.Tab.1.center" timestamp="1619147099736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1618403974711" />
-    <state width="1345" height="197" key="GridCell.Tab.1.left" timestamp="1618403974711">
+    <state width="1345" height="197" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1619147099736" />
+    <state width="1345" height="197" key="GridCell.Tab.1.left" timestamp="1619147099736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1618403974711" />
-    <state width="1345" height="197" key="GridCell.Tab.1.right" timestamp="1618403974711">
+    <state width="1345" height="197" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1619147099736" />
+    <state width="1345" height="197" key="GridCell.Tab.1.right" timestamp="1619147099736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1618403974711" />
-    <state width="1345" height="197" key="GridCell.Tab.2.bottom" timestamp="1618403871602">
+    <state width="1345" height="197" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1619147099736" />
+    <state width="1345" height="197" key="GridCell.Tab.2.bottom" timestamp="1619147099737">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618403871602" />
-    <state width="1345" height="197" key="GridCell.Tab.2.center" timestamp="1618403871602">
+    <state width="1345" height="197" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619147099737" />
+    <state width="1345" height="197" key="GridCell.Tab.2.center" timestamp="1619147099736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1618403871602" />
-    <state width="1345" height="197" key="GridCell.Tab.2.left" timestamp="1618403871602">
+    <state width="1345" height="197" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1619147099736" />
+    <state width="1345" height="197" key="GridCell.Tab.2.left" timestamp="1619147099736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1618403871602" />
-    <state width="1345" height="197" key="GridCell.Tab.2.right" timestamp="1618403871602">
+    <state width="1345" height="197" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1619147099736" />
+    <state width="1345" height="197" key="GridCell.Tab.2.right" timestamp="1619147099736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1618403871602" />
-    <state width="1345" height="197" key="GridCell.Tab.3.bottom" timestamp="1618403871603">
+    <state width="1345" height="197" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1619147099736" />
+    <state width="1345" height="197" key="GridCell.Tab.3.bottom" timestamp="1619147099737">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618403871603" />
-    <state width="1345" height="197" key="GridCell.Tab.3.center" timestamp="1618403871602">
+    <state width="1345" height="197" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619147099737" />
+    <state width="1345" height="197" key="GridCell.Tab.3.center" timestamp="1619147099737">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1618403871602" />
-    <state width="1345" height="197" key="GridCell.Tab.3.left" timestamp="1618403871602">
+    <state width="1345" height="197" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1619147099737" />
+    <state width="1345" height="197" key="GridCell.Tab.3.left" timestamp="1619147099737">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1618403871602" />
-    <state width="1345" height="197" key="GridCell.Tab.3.right" timestamp="1618403871602">
+    <state width="1345" height="197" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1619147099737" />
+    <state width="1345" height="197" key="GridCell.Tab.3.right" timestamp="1619147099737">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="197" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1618403871602" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1617134827083">
+    <state width="1345" height="197" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1619147099737" />
+    <state x="35" y="18" width="1194" height="710" key="SettingsEditor" timestamp="1619504586732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617134827083" />
+    <state x="35" y="18" width="1194" height="710" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1619504586732" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1618922613225">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618922613225" />
     <state x="391" y="81" width="583" height="624" key="find.popup" timestamp="1618076919933">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -265,10 +299,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/express/routes/access_blogger/blogger.js</url>
+          <url>file://$PROJECT_DIR$/express/routes/auth/auth.js</url>
+          <line>35</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express/routes/auth/auth.js</url>
+          <line>22</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express/routes/auth/auth.js</url>
+          <line>21</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express/routes/auth/auth.js</url>
           <line>33</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="34" />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express/routes/auth/auth.js</url>
+          <line>46</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express/routes/auth/auth.js</url>
+          <line>45</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

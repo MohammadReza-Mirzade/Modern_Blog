@@ -4,6 +4,7 @@ import MenuDashboard from './MenuDashboard';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from './Home';
 import UserArticlePage from "./UserArticlePage";
+import UserNewArticlePage from "./UserNewAritclePage";
 import UserUpdatePasswordPage from "./UserUpdatePasswordPage";
 import UserUpdateInfoPage from "./UserUpdateInfoPage";
 import {sessionChecker} from "../../tools/session";
@@ -37,8 +38,11 @@ class Dashboard extends React.Component{
                         <Route exact path="/dashboard">
                             <Home page={this.whichPage} />
                         </Route>
-                        <Route path="/dashboard/article">
+                        <Route path="/dashboard/myArticles">
                             <UserArticlePage page={this.whichPage} />
+                        </Route>
+                        <Route path="/dashboard/newArticle">
+                            <UserNewArticlePage page={this.whichPage} />
                         </Route>
                         <Route path="/dashboard/userUpdatePassword">
                             <UserUpdatePasswordPage page={this.whichPage} />
