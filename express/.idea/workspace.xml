@@ -20,45 +20,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58c526d0-8b9c-4e4d-b343-87e308aa7c28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/access_admin/article/article.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/access_blogger/article/article.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/access_blogger/article/article.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/access_blogger/blogger/blogger.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/access_blogger/blogger/blogger.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/access_general/article/article.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/access_general/article/article.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../reactjs-admin/.idea/reactjs-admin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserNewAritclePage/UserNewArticlePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserNewAritclePage/UserNewArticlePage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserNewAritclePage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/access_admin/blogger/blogger.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/access_admin/blogger/blogger.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/access_admin/comment/comment.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/access_admin/comment/comment.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Articles/Article/Article.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Articles/Article/Article.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Articles/Article/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Articles/Articles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Articles/Articles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactjs/src/components/Articles/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Blogger.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Blogger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/access_admin/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_admin/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/access_admin/article/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_admin/admin/admin.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/access_blogger/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_blogger/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/access_blogger/article/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_blogger/article/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/access_blogger/blogger.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_blogger/blogger/blogger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/access_blogger/article/article.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_blogger/article/article.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/access_general/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_general/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/access_general/article/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_admin/admin/admin.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth/auth.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth/auth.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_admin/article/article.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/general-tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/tools/general-tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/access_general/article/article.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_general/article/article.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/access_general/article/article.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_general/article/article.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactjs/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactjs/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/MenuDashboard/MenuDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/MenuDashboard/MenuDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserUpdateInfoPage/UserUpdateInfoPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserUpdateInfoPage/UserUpdateInfoPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserUpdateInfoPage/UserUpdateInfoPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserUpdateInfoPage/UserUpdateInfoPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Signup/FormAvatar/FormAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Signup/FormAvatar/FormAvatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Signup/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Signup/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/2.c2235403.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/2.c2235403.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/2.c2235403.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/3.8e05c0a1.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/3.8e05c0a1.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/main.fcbe84dd.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/main.fcbe84dd.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/runtime-main.44a69852.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/runtime-main.44a69852.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserNewAritclePage/UserNewArticlePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserNewAritclePage/UserNewArticlePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Navbar/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +107,7 @@
       <updated>1616911379959</updated>
       <workItem from="1616911392652" duration="8441000" />
       <workItem from="1619617131652" duration="16685000" />
-      <workItem from="1619888401028" duration="19603000" />
+      <workItem from="1619888401028" duration="49636000" />
     </task>
     <servers />
   </component>
@@ -136,74 +131,78 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="14" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1619770566043" />
-    <state width="939" height="618" key="DebuggerActiveHint" timestamp="1620024762381">
+    <state x="438" y="0" key="#xdebugger.evaluate" timestamp="1620084774792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="939" height="618" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1620024762381" />
-    <state width="1346" height="234" key="GridCell.Tab.0.bottom" timestamp="1620050727275">
+    <state x="438" y="0" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1620084774792" />
+    <state width="939" height="618" key="DebuggerActiveHint" timestamp="1620118663619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620050727275" />
-    <state width="1346" height="234" key="GridCell.Tab.0.center" timestamp="1620050727275">
+    <state width="939" height="618" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1620118663619" />
+    <state width="1346" height="234" key="GridCell.Tab.0.bottom" timestamp="1620118608027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620050727275" />
-    <state width="1346" height="234" key="GridCell.Tab.0.left" timestamp="1620050727274">
+    <state width="1346" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620118608027" />
+    <state width="1346" height="234" key="GridCell.Tab.0.center" timestamp="1620118608026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620050727274" />
-    <state width="1346" height="234" key="GridCell.Tab.0.right" timestamp="1620050727275">
+    <state width="1346" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620118608026" />
+    <state width="1346" height="234" key="GridCell.Tab.0.left" timestamp="1620118608026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620050727275" />
-    <state width="1346" height="234" key="GridCell.Tab.1.bottom" timestamp="1620050727275">
+    <state width="1346" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620118608026" />
+    <state width="1346" height="234" key="GridCell.Tab.0.right" timestamp="1620118608026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620050727275" />
-    <state width="1346" height="234" key="GridCell.Tab.1.center" timestamp="1620050727275">
+    <state width="1346" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620118608026" />
+    <state width="1346" height="234" key="GridCell.Tab.1.bottom" timestamp="1620118613695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1620050727275" />
-    <state width="1346" height="234" key="GridCell.Tab.1.left" timestamp="1620050727275">
+    <state width="1346" height="234" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620118613695" />
+    <state width="1346" height="234" key="GridCell.Tab.1.center" timestamp="1620118613695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1620050727275" />
-    <state width="1346" height="234" key="GridCell.Tab.1.right" timestamp="1620050727275">
+    <state width="1346" height="234" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1620118613695" />
+    <state width="1346" height="234" key="GridCell.Tab.1.left" timestamp="1620118613695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1620050727275" />
-    <state width="1346" height="234" key="GridCell.Tab.2.bottom" timestamp="1620050727276">
+    <state width="1346" height="234" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1620118613695" />
+    <state width="1346" height="234" key="GridCell.Tab.1.right" timestamp="1620118613695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620050727276" />
-    <state width="1346" height="234" key="GridCell.Tab.2.center" timestamp="1620050727276">
+    <state width="1346" height="234" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1620118613695" />
+    <state width="1346" height="234" key="GridCell.Tab.2.bottom" timestamp="1620118607743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1620050727276" />
-    <state width="1346" height="234" key="GridCell.Tab.2.left" timestamp="1620050727275">
+    <state width="1346" height="234" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620118607743" />
+    <state width="1346" height="234" key="GridCell.Tab.2.center" timestamp="1620118607742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1620050727275" />
-    <state width="1346" height="234" key="GridCell.Tab.2.right" timestamp="1620050727276">
+    <state width="1346" height="234" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1620118607742" />
+    <state width="1346" height="234" key="GridCell.Tab.2.left" timestamp="1620118607742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1620050727276" />
-    <state width="1346" height="234" key="GridCell.Tab.3.bottom" timestamp="1620050727276">
+    <state width="1346" height="234" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1620118607742" />
+    <state width="1346" height="234" key="GridCell.Tab.2.right" timestamp="1620118607742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620050727276" />
-    <state width="1346" height="234" key="GridCell.Tab.3.center" timestamp="1620050727276">
+    <state width="1346" height="234" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1620118607742" />
+    <state width="1346" height="234" key="GridCell.Tab.3.bottom" timestamp="1620118607744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1620050727276" />
-    <state width="1346" height="234" key="GridCell.Tab.3.left" timestamp="1620050727276">
+    <state width="1346" height="234" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620118607744" />
+    <state width="1346" height="234" key="GridCell.Tab.3.center" timestamp="1620118607743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1620050727276" />
-    <state width="1346" height="234" key="GridCell.Tab.3.right" timestamp="1620050727276">
+    <state width="1346" height="234" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1620118607743" />
+    <state width="1346" height="234" key="GridCell.Tab.3.left" timestamp="1620118607743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="234" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1620050727276" />
+    <state width="1346" height="234" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1620118607743" />
+    <state width="1346" height="234" key="GridCell.Tab.3.right" timestamp="1620118607743">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1346" height="234" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1620118607743" />
     <state x="230" y="11" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1620050719897">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -216,5 +215,59 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1619888889638" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/access_general/api.js</url>
+          <line>7</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/access_general/article/article.controller.js</url>
+          <line>5</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/access_general/article/article.service.js</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/access_general/article/article.service.js</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/access_general/article/article.service.js</url>
+          <line>12</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/access_general/article/article.service.js</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/access_general/article/article.service.js</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/access_general/article/article.service.js</url>
+          <line>25</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

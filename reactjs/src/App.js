@@ -67,6 +67,7 @@ function App() {
                 <Route path="/login"><Login success={login} /></Route>
                 <Route path="/signup"><Signup success={signup} /></Route>
                 <Route path="/dashboard" style={{padding: 0, margin: 0}} value="/dashboard"><Dashboard /></Route>
+                <Route path="/articles" style={{padding: 0, margin: 0}} value="/articles"><Dashboard /></Route>
             </TabContext>
         </div>
   );

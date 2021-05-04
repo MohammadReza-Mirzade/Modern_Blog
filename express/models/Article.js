@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
 const defaultStringSchema = {
@@ -12,17 +11,17 @@ const ArticleSchema = new Schema({
     title: {
         ...defaultStringSchema,
     },
-    file:{
-        ...defaultStringSchema,
-    },
     lastUpdate:{
         type: Date,
         default: Date.now()
     },
+    description:{
+        ...defaultStringSchema,
+    },
     owner:{
         type: Schema.Types.ObjectId,
         required: true,
-        ref: 'User'
+        ref: 'Blogger'
     },
     createdAt: {
         type: Date,

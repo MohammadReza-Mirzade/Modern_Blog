@@ -20,9 +20,10 @@ export default function Navbar(props){
         <AppBar position="static" >
             <TabList onChange={handleChange} aria-label="simple tabs example">
                 <Tab style={{float: 'left'}} label="Home" value="/"/>
+                <Tab style={{float: 'left'}} label="Article" value="/article"/>
                 {!props.dashboard
-                    ?[<Tab style={{float: 'left'}} label="Loge In" value="/login"/>,
-                     <Tab style={{float: 'left'}} label="sign Up" value="/signup"/>]
+                    ?[<Tab style={{float: 'right'}} label="Loge In" value="/login"/>,
+                     <Tab style={{float: 'right'}} label="sign Up" value="/signup"/>]
                     :<Tab style={{float: 'right'}} label={<AccountCircle/>} value="/dashboard"/>
                 }
             </TabList>

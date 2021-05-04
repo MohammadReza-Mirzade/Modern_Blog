@@ -25,7 +25,6 @@ import AvatarEditor from "react-avatar-editor";
 import Slide from "@material-ui/core/Slide";
 import {sessionChecker} from "../../../tools/session";
 import Axios from 'axios';
-import {imgSrcToBlob} from "blob-util";
 
 
 
@@ -59,7 +58,7 @@ class UserNewArticlePage extends React.Component{
             console.log(res.data);
             if (res.data.msg.trim() === 'success') {
                 this.setState({error: ""});
-                this.setState({step: 4});
+                this.setState({open2: true});
             } else if (res.data.msg.trim() === "session") {
                 sessionChecker();
             } else {
@@ -91,7 +90,6 @@ class UserNewArticlePage extends React.Component{
             fetch(canvas)
                 .then(res => res.blob())
                 .then(blob => {
-                    // const blob = await fetch(url).then(r => r.blob());
                     this.setState({image: window.URL.createObjectURL(blob)});
                     const extension = blob.type.split('/')[1];
                     const imageFile = new File([blob], `${Date.now()}.${extension}`, {
@@ -137,7 +135,7 @@ class UserNewArticlePage extends React.Component{
             imgCanvas.height = images[i].height;
             imgContext.drawImage(images[i], 0, 0, images[i].width, images[i].height);
             let canvas = imgCanvas.toDataURL("");
-            let blob = await fetch(canvas);
+            let blob = await fetch(canvas).then(res => res.blob());
             let extension = blob.type.split('/')[1];
             let imageFile = new File([blob], `${Date.now()}.${extension}`, {
                 type: blob.type,
@@ -146,7 +144,6 @@ class UserNewArticlePage extends React.Component{
             formData.append(i.toString() , imageFile);
         }
         console.log(formData);
-        this.setState({open2: true});
         this.sendData(formData);
     }
 
@@ -253,9 +250,6 @@ class UserNewArticlePage extends React.Component{
                                 // imageUploadURL: '/upload_image',
                                 // imageUploadMethod: 'POST',
                                 imageAllowedTypes: ['jpeg', 'jpg', 'png'],
-                                events: {
-                                    'image.inserted': ($img, response) => {this.saveImages($img)},
-                                },
                             }}
                             model={this.state.field.model}
                             onModelChange={this.handleModelChange}
