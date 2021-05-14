@@ -12,12 +12,6 @@ const defaultStringSchema = {
 const CommentSchema = new Schema({
     text:{
         ...defaultStringSchema,
-        minlength: 3,
-        maxlength: 30
-    },
-    lastUpdate:{
-        type: Date,
-        default: Date.now()
     },
     owner:{
         type: Schema.Types.ObjectId,

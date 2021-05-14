@@ -7,9 +7,7 @@ import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
     DesktopOutlined,
-    ContainerOutlined,
     LogoutOutlined,
-    SettingFilled,
 } from '@ant-design/icons';
 import Axios from "axios";
 const { SubMenu } = Menu;
@@ -28,8 +26,10 @@ class MenuDashboard extends React.Component {
     };
 
     loggingOut = async () => {
+        console.log("logout");
         const data = await Axios.get(/*'https://api.mocki.io/v1/6910a074*/'/admin/logout');
-        this.props.history.push("/login");
+        console.log(data);
+        window.location.href = "/";
     };
 
 
@@ -48,16 +48,16 @@ class MenuDashboard extends React.Component {
                         {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
                     </Button>
                     <Menu.Item key="/" icon={<DesktopOutlined />}>
-                        <NavLink className={style.NavLink} to="/ad">Dashboard</NavLink>
+                        <NavLink className={style.NavLink} to="/admin">Dashboard</NavLink>
                     </Menu.Item>
                     <Menu.Item key="/bloggers" icon={<DesktopOutlined />}>
-                        <NavLink className={style.NavLink} to="/ad/bloggers">Bloggers</NavLink>
+                        <NavLink className={style.NavLink} to="/admin/bloggers">Bloggers</NavLink>
                     </Menu.Item>
                     <Menu.Item key="/articles" icon={<DesktopOutlined />}>
-                        <NavLink className={style.NavLink} to="/ad/articles">Articles</NavLink>
+                        <NavLink className={style.NavLink} to="/admin/articles">Articles</NavLink>
                     </Menu.Item>
                     <Menu.Item key="/comments" icon={<DesktopOutlined />}>
-                        <NavLink className={style.NavLink} to="/ad/comments">Comments</NavLink>
+                        <NavLink className={style.NavLink} to="/admin/comments">Comments</NavLink>
                     </Menu.Item>
                     <Menu.Item key="4" onClick={this.loggingOut} icon={<LogoutOutlined />}>Logout</Menu.Item>
                 </Menu>

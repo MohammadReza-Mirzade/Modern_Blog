@@ -46,6 +46,13 @@ class Signup extends React.Component{
     }
 
 
+    componentDidMount() {
+        Axios.get("/session").then(res => {
+            if (res.data.msg === "session") window.location.href = "/dashboard";
+        });
+    }
+
+
     sendData() {
         const formData = new FormData();
         Object.entries(Store.getState().field).forEach(entry => {

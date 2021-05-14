@@ -8,7 +8,7 @@ import Dashboard from "./components/Dashboard";
 import Articles from "./components/Articles";
 import React from 'react';
 import TabContext from '@material-ui/lab/TabContext';
-import {Route, useHistory} from 'react-router-dom';
+import {Route, useHistory, Redirect, Switch} from 'react-router-dom';
 import {Spin} from "antd";
 import {sessionChecker} from "./tools/session";
 import Axios from "axios";
@@ -65,12 +65,15 @@ function App() {
                     Waiting for connection ...
                 </div></div>:<></>}
                 <Navbar dashboard={dashboard} handleChange={handleChange} />
-                <Route exact path="/"><Home /></Route>
-                <Route path="/login"><Login success={login} /></Route>
-                <Route path="/signup"><Signup success={signup} /></Route>
-                <Route path="/dashboard" style={{padding: 0, margin: 0}} value="/dashboard"><Dashboard /></Route>
-                <Route path="/articles" style={{padding: 0, margin: 0}} value="/articles"><Articles /></Route>
-                <Route path="/"><Page404 /></Route>
+                <Switch>
+                    <Route exact path="/"><Home /></Route>
+                    <Route path="/login"><Login success={login} /></Route>
+                    <Route path="/signup"><Signup success={signup} /></Route>
+                    <Route path="/dashboard" style={{padding: 0, margin: 0}} value="/dashboard"><Dashboard /></Route>
+                    <Route path="/articles" style={{padding: 0, margin: 0}} value="/articles"><Articles /></Route>
+                    <Route exact path="/404"><Page404 /></Route>
+                    <Redirect to="/404" />
+                </Switch>
             </TabContext>
         </div>
   );

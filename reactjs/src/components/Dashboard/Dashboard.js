@@ -8,6 +8,7 @@ import UserNewArticlePage from "./UserNewAritclePage";
 import UserUpdatePasswordPage from "./UserUpdatePasswordPage";
 import UserUpdateInfoPage from "./UserUpdateInfoPage";
 import {sessionChecker} from "../../tools/session";
+import Axios from 'axios';
 
 
 class Dashboard extends React.Component{
@@ -20,6 +21,11 @@ class Dashboard extends React.Component{
         };
     }
 
+    componentDidMount() {
+        Axios.get("/session").then(res => {
+            if (res.data.msg === "session") window.location.href = "/";
+        });
+    }
 
     whichPage = (page) => {
         this.setState({page: page});

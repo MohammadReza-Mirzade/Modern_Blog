@@ -33,16 +33,16 @@ class App extends React.Component{
               <MenuDashboard page={this.state.page} />
             </div>
             <div className={style.view}>
-              <Route exact path="/ad">
+              <Route exact path="/admin">
                 <Dashboard />
               </Route>
-              <Route exact path="/ad/bloggers">
+              <Route exact path="/admin/bloggers">
                 <Bloggers />
               </Route>
-              <Route exact path="/ad/articles">
+              <Route exact path="/admin/articles">
                 <Articles />
               </Route>
-              <Route exact path="/ad/comments">
+              <Route exact path="/admin/comments">
                 <Comments />
               </Route>
             </div>

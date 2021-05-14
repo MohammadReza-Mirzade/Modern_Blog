@@ -30,9 +30,9 @@ class Articles extends React.Component{
     deleteArticle = (id) => {
         Axios.delete("/admin/article", {data: {id: id}}).then(res => {
             if (res.data.msg === "success"){
-                this.setState({articles: this.setState.articles.filter((value) => {
-                    return value.key != id;
-                })});
+                Axios.get("/admin/article").then((data) => {
+                    this.setState({articles: data.data.articles});
+                });
             } else {
                 alert(res.data.msg);
             }

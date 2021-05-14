@@ -3,7 +3,6 @@ import './Login.css';
 import Axios from 'axios';
 import Form from "./Form";
 import ParticlesBg from "particles-bg";
-import {sessionChecker} from "../../tools/session";
 
 
 
@@ -13,6 +12,13 @@ class Login extends React.Component{
         this.state = {
             error: ""
         }
+    }
+
+
+    componentDidMount() {
+        Axios.get("/session").then(res => {
+            if (res.data.msg === "session") window.location.href = "/dashboard";
+        });
     }
 
 

@@ -15,7 +15,7 @@ getAllBloggers = (req, res) => {
                 lastName: blogger.lastName,
                 gender: blogger.gender,
                 mobileNumber: blogger.mobileNumber,
-                avatar: ("/image/avatars" + blogger.avatar),
+                avatar: ("/images/avatars/" + blogger.avatar),
                 createdAt: blogger.createdAt,
             });
         });

@@ -21,18 +21,18 @@ class Bloggers extends React.Component{
                     // lastName: blogger.lastName,
                     // gender: blogger.gender,
                     // mobileNumber: blogger.mobileNumber
-            this.setState({articles: data.data.bloggers});
+            this.setState({bloggers: data.data.bloggers});
         });
     }
 
 
 
-    deleteArticle = (id) => {
-        Axios.delete("/blogger/blogger", {data: {id: id}}).then(res => {
+    deleteBlogger = (id) => {
+        Axios.delete("/admin/blogger", {data: {id: id}}).then(res => {
             if (res.data.msg === "success"){
-                this.setState({articles: this.setState.articles.filter((value) => {
-                        return value.key != id;
-                    })});
+                Axios.get("/admin/blogger").then((data) => {
+                    this.setState({bloggers: data.data.bloggers});
+                });
             } else {
                 alert(res.data.msg);
             }
@@ -83,7 +83,7 @@ class Bloggers extends React.Component{
             title: "Action",
             key: "action",
             dataIndex: "action",
-            render: (text, record) => <button onClick={() => this.deleteArticle(record.key)} className={style.button}>Delete Article</button>,
+            render: (text, record) => <button onClick={() => this.deleteBlogger(record.key)} className={style.button}>Delete Article</button>,
         }
     ];
 

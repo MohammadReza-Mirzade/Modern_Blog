@@ -12,12 +12,12 @@ class Comments extends React.Component{
     }
 
 
-    deleteArticle = (id) => {
-        Axios.delete("/blogger/comment", {data: {id: id}}).then(res => {
+    deleteComment = (id) => {
+        Axios.delete("/admin/comment", {data: {id: id}}).then(res => {
             if (res.data.msg === "success"){
-                this.setState({articles: this.setState.articles.filter((value) => {
-                        return value.key != id;
-                    })});
+                Axios.get("/admin/comment").then((data) => {
+                    this.setState({comments: data.data.comments});
+                });
             } else {
                 alert(res.data.msg);
             }
@@ -31,7 +31,7 @@ class Comments extends React.Component{
             // owner: blogger.username,
             // article: blogger.id,
             // text: blogger.text,
-            this.setState({articles: data.data.comments});
+            this.setState({comments: data.data.comments});
         });
     }
 
@@ -59,7 +59,7 @@ class Comments extends React.Component{
             title: "Action",
             key: "action",
             dataIndex: "action",
-            render: (text, record) => <button onClick={() => this.deleteArticle(record.key)} className={style.button}>Delete Article</button>,
+            render: (text, record) => <button onClick={() => this.deleteComment(record.key)} className={style.button}>Delete Article</button>,
         },
         {
             title: "Text",

@@ -44,6 +44,20 @@ class ReadingArticle extends React.Component{
         }
     }
 
+    componentDidMount() {
+        Axios.get("/comment", {
+            params: {
+                id: this.props.article.id,
+            }
+        }).then((data) => {
+            if (data.data.msg === "success"){
+                this.setState({comments: data.data.comments});
+            } else {
+                alert(data.data.msg);
+            }
+        });
+    }
+
     close = () => {
         this.props.close();
     }
@@ -59,11 +73,27 @@ class ReadingArticle extends React.Component{
         });
 
         const comment = {
-
+            text: this.state.value,
+            article: this.props.article.id,
         }
 
-        Axios.post("", comment).then(function (response) {
-            console.log(response);
+        Axios.post("/comment", comment).then(function (data) {
+            if (data.data.msg === "success"){
+                Axios.get("/comment", {
+                    params: {
+                        id: this.props.article.id,
+                    }
+                }).then((data) => {
+                    if (data.data.msg === "success"){
+                        this.setState({comments: data.data.comments});
+                    } else {
+                        alert(data.data.msg);
+                    }
+                });
+            } else {
+                alert(data.data.msg);
+            }
+            this.setState({submitting: false});
         }).catch(function (error) {
             console.log(error);
         });;
