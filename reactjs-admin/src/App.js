@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import style from './App.module.css';
+import MenuDashboard from './components/MenuDashboard';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Dashboard from "./components/Dashboard";
+import Bloggers from "./components/Bloggers";
+import Articles from "./components/Articles";
+import Comments from "./components/Comments";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends React.Component{
+
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: 1
+    };
+  }
+
+
+  whichPage = (page) => {
+    this.setState({page: page});
+  }
+
+
+  render() {
+    return(
+        <div className={style.dashboard}>
+          <Router>
+            <div className={'menu'}>
+              <MenuDashboard page={this.state.page} />
+            </div>
+            <div className={style.view}>
+              <Route exact path="/ad">
+                <Dashboard />
+              </Route>
+              <Route exact path="/ad/bloggers">
+                <Bloggers />
+              </Route>
+              <Route exact path="/ad/articles">
+                <Articles />
+              </Route>
+              <Route exact path="/ad/comments">
+                <Comments />
+              </Route>
+            </div>
+          </Router>
+        </div>
+    );
+  }
 }
 
 export default App;

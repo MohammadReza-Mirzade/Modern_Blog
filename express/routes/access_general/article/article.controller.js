@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const {getAllArticle} = require("./article.service");
+const {getAllArticle, getArticle} = require("./article.service");
 
 
-router.get("/", getAllArticle);
+router.get("/all", getAllArticle);
+router.get("/", getArticle);
 
 
 module.exports = router;

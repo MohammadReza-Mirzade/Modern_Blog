@@ -167,16 +167,16 @@ class UserNewArticlePage extends React.Component{
                                 onDrop={this.handleDrop}
                                 noClick
                                 noKeyboard
-                                style={{ width: '250px', height: '250px' }}
+                                style={{ width: '800px', height: '400px' }}
                             >
                                 {({ getRootProps, getInputProps }) => (
                                     <div {...getRootProps()}>
                                         <AvatarEditor
                                             ref={this.setEditorRef}
                                             image={this.state.field.avatar}
-                                            width={250}
-                                            height={250}
-                                            border={50}
+                                            width={800}
+                                            height={400}
+                                            border={0}
                                             color={[255, 255, 255, 0.6]} // RGBA
                                             scale={1}
                                             rotate={0}

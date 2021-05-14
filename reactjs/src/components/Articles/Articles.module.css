@@ -6,4 +6,24 @@
     height: calc(100vh - 48px);
     padding: 0;
     margin: 0;
+    margin-top: 30px;
+}
+
+
+.ReadingArticle{
+    width: 95%;
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #b0b0b0;
+    height: fit-content;
+}
+
+.Article:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: fit-content;
+}
+
+.Article{
+    margin: 30px;
 }

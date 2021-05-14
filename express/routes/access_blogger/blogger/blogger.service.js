@@ -1,5 +1,11 @@
+const Blogger = require('../../../models/Blogger');
+const bcrypt = require('bcrypt')
+const path = require('path');
+const formidableMiddleware = require('express-formidable');
+const validator = require("validator");
 
-const update = (req, res, next) => {
+
+const update = (req, res) => {
     if(req.body.password && req.body.newPassword) {
         if (req.body.password.trim().length > 30 || req.body.password.trim().length < 8) return res.json({msg: "Password length must be between 30 characters and 8 characters."});
         Blogger.findOne({_id: req.session.user._id}, (err, blogger) => {
@@ -79,6 +85,5 @@ const logout = (req, res) => {
 
 module.exports = {
     update,
-    updateAvatar,
     logout
 };

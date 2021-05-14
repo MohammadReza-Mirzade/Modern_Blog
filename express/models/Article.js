@@ -11,10 +11,6 @@ const ArticleSchema = new Schema({
     title: {
         ...defaultStringSchema,
     },
-    lastUpdate:{
-        type: Date,
-        default: Date.now()
-    },
     description:{
         ...defaultStringSchema,
     },
@@ -26,6 +22,10 @@ const ArticleSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    avatar: {
+        type: String,
+        trim: true,
     }
 });
 

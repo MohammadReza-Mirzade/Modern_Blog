@@ -24,6 +24,7 @@ class Login extends React.Component{
             });
             console.log(res.data);
             if (res.data.msg.trim() === 'success') {
+                if(res.data.ad) window.location.replace("/admin");
                 this.props.success();
                 this.setState({error: ""});
             } else if (res.data.msg === "session") {

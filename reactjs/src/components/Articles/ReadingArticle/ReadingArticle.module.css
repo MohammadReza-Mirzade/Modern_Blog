@@ -1,0 +1,56 @@
+.Exit{
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-color: #ffc0c0;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.Exit:hover{
+    background-color: #ff0000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+}
+
+
+.Title{
+    margin-top: 10px;
+}
+
+
+.Avatar{
+    width: 800px;
+    margin: 30px;
+    height: 400px;
+}
+
+
+.AvatarWriter{
+    width: 70px;
+    border-radius: 50%;
+    float: left;
+    margin: 0 40px;
+}
+
+
+.Writer{
+    float: left;
+    margin: 20px;
+    margin-right: 50px;
+}
+
+
+.CreatedAt{
+    float: left;
+    margin: 20px;
+}
+
+
+.Article{
+    margin: 20pX;
+    text-align: left;
+}

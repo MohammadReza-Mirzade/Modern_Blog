@@ -29,7 +29,7 @@ class MenuDashboard extends React.Component {
 
     loggingOut = async () => {
         const data = await Axios.get(/*'https://api.mocki.io/v1/6910a074*/'/blogger/logout');
-        this.props.history.push("/login");
+        window.location.href = "/";
     };
 
 
@@ -51,8 +51,8 @@ class MenuDashboard extends React.Component {
                         <NavLink className={style.NavLink} to="/dashboard">Dashboard</NavLink>
                     </Menu.Item>
 
-                    <SubMenu key="sub1" icon={<SettingFilled />} title="Article">
-                        <Menu.Item key="/myArticles" icon={<ContainerOutlined />}>
+                    <SubMenu key="sub0" icon={<ContainerOutlined />} title="Article">
+                        <Menu.Item key="/myArticles">
                             <NavLink className={style.NavLink} to="/dashboard/myArticles">My Articles</NavLink>
                         </Menu.Item>
                         <Menu.Item key="/newArticle" >

@@ -5,12 +5,14 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
+import Articles from "./components/Articles";
 import React from 'react';
 import TabContext from '@material-ui/lab/TabContext';
 import {Route, useHistory} from 'react-router-dom';
 import {Spin} from "antd";
 import {sessionChecker} from "./tools/session";
 import Axios from "axios";
+import Page404 from "./components/Page404";
 
 
 function App() {
@@ -67,7 +69,8 @@ function App() {
                 <Route path="/login"><Login success={login} /></Route>
                 <Route path="/signup"><Signup success={signup} /></Route>
                 <Route path="/dashboard" style={{padding: 0, margin: 0}} value="/dashboard"><Dashboard /></Route>
-                <Route path="/articles" style={{padding: 0, margin: 0}} value="/articles"><Dashboard /></Route>
+                <Route path="/articles" style={{padding: 0, margin: 0}} value="/articles"><Articles /></Route>
+                <Route path="/"><Page404 /></Route>
             </TabContext>
         </div>
   );

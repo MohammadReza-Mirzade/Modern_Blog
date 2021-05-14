@@ -24,7 +24,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../reactjs/build')));
+app.use(express.static(path.join(__dirname, '../reactjs-admin/build')));
 app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, '../file')));
+
 
 app.use(session({
     key: 'user_sid',

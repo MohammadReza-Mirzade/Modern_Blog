@@ -10,11 +10,6 @@ const defaultStringSchema = {
 
 
 const CommentSchema = new Schema({
-    title: {
-        ...defaultStringSchema,
-        minlength: 3,
-        maxlength: 30
-    },
     text:{
         ...defaultStringSchema,
         minlength: 3,

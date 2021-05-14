@@ -25,7 +25,11 @@ class Article extends React.Component{
     render() {
         return(
             <Card
-                style={{ width: 200 }}
+                style={{
+                    width: 300,
+                    height: 350,
+                    padding: 5,
+                }}
                 cover={
                     <Avatar.Group
                         maxCount={2}
@@ -44,27 +48,34 @@ class Article extends React.Component{
                                 xl: 100,
                                 xxl: 100,
                             }}
-                            src={this.props.articleAvatar}
+                            src={"/article/" + this.props.id + "/" + this.props.avatar}
+                            className={style.Avatar}
                         />
                         <Avatar
                             style={{
                                 alignSelf: "flex-end",
                                 position: 'absolute',
-                                left: "100"+'px',
+                                top: 70,
+                                left: 180,
                             }}
-                            src={this.props.bloggerAvatar}
+                            className={style.Avatar}
+                            src={"/images/avatars/" + this.props.bloggerAvatar}
                         />
                     </Avatar.Group>
                 }
-                actions={[
+                /*actions={[
                     <SettingOutlined key="setting" />,
                     <EditOutlined key="edit" />,
-                ]}
+                ]}*/
             >
                 <Meta
-                    title="Card title"
-                    description="This is the description and its very long (not very long but it must be at last twenti word its nice it isn't?)."
+                    title={this.props.title}
+                    description={this.props.description}
                 />
+                <hr/>
+                 writer: {this.props.owner}<br/>
+                 article created at:
+                 <p style={{color: '#01024d'}}>{this.props.createdAt}</p>
             </Card>
         );
     }

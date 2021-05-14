@@ -23,7 +23,11 @@ generalTools.sessionBlogger = function (req, res, next) {
 };
 
 generalTools.sessionAdmin = function (req, res, next) {
-    if (!(req.cookies.user_sid && req.session.user) || req.session.user.role !== "admin") return res.status(404);
+    if (!(req.cookies.user_sid && req.session.user) || req.session.user.role !== "admin") {
+        console.log(":(");
+        return res.status(404);
+    }
+    console.log(":)")
     return next();
 }
 
