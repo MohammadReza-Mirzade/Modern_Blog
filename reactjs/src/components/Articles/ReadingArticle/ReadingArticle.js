@@ -130,6 +130,8 @@ class ReadingArticle extends React.Component{
                 {/*        }*/}
                 {/*    }}*/}
                 {/*/>*/}
+                <hr/>
+                <div className={style.Comment}>
                 <Comment
                     avatar={
                         <Avatar
@@ -147,6 +149,7 @@ class ReadingArticle extends React.Component{
                     }
                 />
                 {comments.length > 0 && <CommentList comments={comments} />}
+                </div>
             </div>
         );
     }

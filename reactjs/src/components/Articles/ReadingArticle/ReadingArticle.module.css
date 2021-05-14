@@ -1,3 +1,12 @@
+.Comment{
+    border: solid #7a7a7a 2px;
+    border-radius: 5px;
+    text-align: justify;
+    margin: 5px;
+    padding: 10px;
+}
+
+
 .Exit{
     float: right;
     width: 40px;

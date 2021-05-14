@@ -3,13 +3,13 @@ const Comment = require("./../../../models/Comment");
 
 
 getAllComments = (req, res) => {
-    Comment.find({article: req.body.id}).populate("owner").exec((err, comments) => {
+    Comment.find({article: req.query.id}).populate("owner").exec((err, comments) => {
         if (err) return res.json({msg: "Internal Server Error."});
         const commentsSP = [];
         comments.forEach(comment => {
             commentsSP.push({
                 author: comment.owner.username,
-                avatar: comment.owner.avatar,
+                avatar: "/images/avatars/" + comment.owner.avatar,
                 content: comment.text,
                 datetime: comment.createdAt,
             });

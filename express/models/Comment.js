@@ -16,7 +16,7 @@ const CommentSchema = new Schema({
     owner:{
         type: Schema.Types.ObjectId,
         required: true,
-        ref: 'User'
+        ref: 'Blogger'
     },
     article:{
         type: Schema.Types.ObjectId,
