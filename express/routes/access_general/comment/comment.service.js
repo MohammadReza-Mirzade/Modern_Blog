@@ -14,7 +14,7 @@ getAllComments = (req, res) => {
                 datetime: comment.createdAt,
             });
         });
-        res.json({msg: "success", comments: commentsSP});
+        return res.json({msg: "success", comments: commentsSP});
     });
 };
 

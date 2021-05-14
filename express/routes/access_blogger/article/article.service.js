@@ -108,9 +108,22 @@ const getBloggerArticle = (req, res) => {
 
 
 
+const deleteArticle = (req, res) => {
+    Article.find({_id: req.body.id, owner: req.session.user._id}, (err, article) => {
+        if (err) return res.json({msg: "Internal Server Error."});
+        if (!article) return res.json({msg: "This is not your article"});
+        Article.deleteOne({_id: req.body.id}, (err, article) => {
+            if (err) return res.json({msg: "Internal Server Error."});
+            res.json({msg: "success"});
+        });
+    });
+}
+
+
 
 module.exports = {
     createArticle,
     updateArticle,
-    getBloggerArticle
+    getBloggerArticle,
+    deleteArticle,
 };

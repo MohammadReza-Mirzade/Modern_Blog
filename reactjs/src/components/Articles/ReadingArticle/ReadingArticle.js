@@ -77,7 +77,7 @@ class ReadingArticle extends React.Component{
             article: this.props.article.id,
         }
 
-        Axios.post("/comment", comment).then(function (data) {
+        Axios.post("/comment", comment).then((data) => {
             if (data.data.msg === "success"){
                 Axios.get("/comment", {
                     params: {
@@ -86,14 +86,16 @@ class ReadingArticle extends React.Component{
                 }).then((data) => {
                     if (data.data.msg === "success"){
                         this.setState({comments: data.data.comments});
+                        this.setState({submitting: false});
                     } else {
                         alert(data.data.msg);
+                        this.setState({submitting: false});
                     }
                 });
             } else {
                 alert(data.data.msg);
+                this.setState({submitting: false});
             }
-            this.setState({submitting: false});
         }).catch(function (error) {
             console.log(error);
         });;

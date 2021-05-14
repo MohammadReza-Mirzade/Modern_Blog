@@ -21,19 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="58c526d0-8b9c-4e4d-b343-87e308aa7c28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/access_blogger/article/article.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_blogger/article/article.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/access_blogger/article/article.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_blogger/article/article.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/access_general/comment/comment.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/access_general/comment/comment.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactjs/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactjs/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/css/main.4f65dfbe.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/css/main.4f65dfbe.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/2.e82a3117.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/2.e82a3117.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/2.e82a3117.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/main.636b26a3.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/main.636b26a3.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/css/main.0474eb06.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/css/main.0474eb06.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/main.4778cbf7.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/build/static/js/main.4778cbf7.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Articles/ReadingArticle/ReadingArticle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Articles/ReadingArticle/ReadingArticle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Articles/ReadingArticle/ReadingArticle.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Articles/ReadingArticle/ReadingArticle.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserArticlePage/UserArticlePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactjs/src/components/Dashboard/UserArticlePage/UserArticlePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +68,11 @@
       <recent name="E:\Mohammad\دوره NodeJS\Public-Project\Modern_Blog\express\routes\access_blogger\blogger" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="npm start" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -93,7 +97,7 @@
       <workItem from="1620371057841" duration="19480000" />
       <workItem from="1620465885077" duration="3650000" />
       <workItem from="1620551834389" duration="8848000" />
-      <workItem from="1620878209312" duration="28853000" />
+      <workItem from="1620878209312" duration="31965000" />
     </task>
     <servers />
   </component>
@@ -197,13 +201,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="176" width="588" height="552" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1620022102290" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1620993671158">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1621017946761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1620993671158" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1619888889638">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1621017946761" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1621017913015">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1619888889638" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1621017913015" />
   </component>
 </project>

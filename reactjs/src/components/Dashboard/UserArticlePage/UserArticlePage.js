@@ -41,11 +41,21 @@ class UserArticlePage extends React.Component{
 
 
     deleteArticle = (id) => {
-        Axios.delete("/blogger/article/delete", {data: {id: id}}).then(res => {
+        Axios.delete("/blogger/article", {data: {id: id}}).then(res => {
             if (res.data.msg === "success"){
-                this.setState({articles: this.setState.articles.filter((value) => {
-                    return value.key != id;
-                })});
+                Axios.get("/blogger/article").then((data) => {
+                    console.log(data.data.articles);
+                    const articles = [];
+                    data.data.articles.forEach(article => {
+                        articles.push({
+                            key: article.id,
+                            title: article.title,
+                            avatar: article.avatar,
+                            createdAt: article.createdAt,
+                        });
+                    });
+                    this.setState({articles: articles});
+                });
             } else {
                 this.setState({error: res.data.msg});
                 alert(res.data.msg);
