@@ -1,0 +1,29 @@
+{
+  "name": "modern_blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "null",
+  "scripts": {
+    "install": "(cd reactjs && npm install && npm run build) && (cd ../reactjs-admin && npm install && npm run build) && (cd ../express && npm install)",
+    "start": "cd express && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammadReza-Mirzade/Modern_Blog.git"
+  },
+  "keywords": [
+    "blog",
+    "article",
+    "moder_blog",
+    "node",
+    "express",
+    "react",
+    "reactjs"
+  ],
+  "author": "MohammadRezaMirzade",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/MohammadReza-Mirzade/Modern_Blog/issues"
+  },
+  "homepage": "https://github.com/MohammadReza-Mirzade/Modern_Blog#readme"
+}
