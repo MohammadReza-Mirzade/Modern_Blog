@@ -4,5 +4,4 @@ const {logout} = require("./admin.service");
 
 router.get("/logout", logout);
 
-
 module.exports = router;

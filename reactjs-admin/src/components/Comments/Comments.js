@@ -59,7 +59,7 @@ class Comments extends React.Component{
             title: "Action",
             key: "action",
             dataIndex: "action",
-            render: (text, record) => <button onClick={() => this.deleteComment(record.key)} className={style.button}>Delete Article</button>,
+            render: (text, record) => <button onClick={() => this.deleteComment(record.key)} className={style.button}>Delete Comment</button>,
         },
         {
             title: "Text",

@@ -41,6 +41,18 @@ class Bloggers extends React.Component{
 
 
 
+    changePassword = (id) => {
+        Axios.put("/admin/blogger", {data: {id: id}}).then(res => {
+            if (res.data.msg === "success"){
+                alert(res.data.msg);
+            } else {
+                alert(res.data.msg);
+            }
+        });
+    };
+
+
+
     columns = [
         {
             title: "Avatar",
@@ -83,7 +95,7 @@ class Bloggers extends React.Component{
             title: "Action",
             key: "action",
             dataIndex: "action",
-            render: (text, record) => <button onClick={() => this.deleteBlogger(record.key)} className={style.button}>Delete Article</button>,
+            render: (text, record) => <><button onClick={() => this.deleteBlogger(record.key)} className={style.button}>Delete Blogger</button><button onClick={() => this.changePassword(record.key)} className={style.button}>Change Password</button></>,
         }
     ];
 

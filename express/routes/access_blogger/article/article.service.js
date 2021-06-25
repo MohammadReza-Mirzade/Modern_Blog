@@ -2,7 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const moveFile = require('move-file');
 const Article = require('../../../models/Article');
-const Blogger = require('../../../models/Blogger');
+const Comment = require("../../../models/Comment");
+
 
 
 const createArticle = (req, res) => {
@@ -45,7 +46,7 @@ const createArticle = (req, res) => {
 
 const updateArticle = (req, res) => {
     if (!req.fields.title || !req.fields.model || !req.files.avatar || !req.fields.id) return res.json({msg : "Bad Request."});
-    Article.find({_id: req.fields.id}, (err, exist) => {
+    Article.find({_id: req.fields.id, owner: req.session.user._id}, (err, exist) => {
         if (!exist) return res.json({msg: "Can not find the article."});
         let model = req.fields.model;
         const pattern = /([^\s]+\s+){0,20}/;
@@ -108,13 +109,24 @@ const getBloggerArticle = (req, res) => {
 
 
 
+
 const deleteArticle = (req, res) => {
     Article.find({_id: req.body.id, owner: req.session.user._id}, (err, article) => {
         if (err) return res.json({msg: "Internal Server Error."});
-        if (!article) return res.json({msg: "This is not your article"});
+        if (!article) return res.json({msg: "This article doesn't exist."});
         Article.deleteOne({_id: req.body.id}, (err, article) => {
             if (err) return res.json({msg: "Internal Server Error."});
-            res.json({msg: "success"});
+            Comment.deleteMany({article: req.body.id}, (err, comments) => {
+                if (err) return res.json({msg: "Internal Server Error"});
+                (async () => {
+                    try {
+                        fs.rmdirSync(path.join(__dirname, "../../../../file/article/" + article._id.toString()), {recursive: true});
+                        res.json({msg: "success"});
+                    } catch (e) {
+                        return res.json({msg: "Internal Server Error."});
+                    }
+                })();
+            });
         });
     });
 }

@@ -1,4 +1,7 @@
-const Article = require("./../../../models/Article");
+const Article = require("../../../models/Article");
+const Comment = require("../../../models/Comment");
+const fs = require('fs');
+const path = require('path');
 
 
 
@@ -26,8 +29,18 @@ getAllArticles = (req, res) => {
 deleteArticle = (req, res) => {
     Article.deleteOne({_id: req.body.id}, (err, article) => {
         if (err) return res.json({msg: "Internal Server Error"});
-        res.json({msg: "success"});
-    })
+        Comment.deleteMany({article: article._id}, (err, comments) => {
+            if (err) return res.json({msg: "Internal Server Error"});
+            (async () => {
+                try {
+                    fs.rmdirSync(path.join(__dirname, "../../../../file/article/" + article._id.toString()), { recursive: true });
+                    res.json({msg: "success"});
+                } catch (e) {
+                    return res.json({msg: "Internal Server Error."});
+                }
+            })();
+        });
+    });
 }
 
 
