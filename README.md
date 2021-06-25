@@ -2,9 +2,8 @@
 
 ## General info
 The goal of this project is to build a website to create and display articles.<br>
-In this project, we have two single page applications that are made with react.<br>
-Reactjs is our main page and reactjs-admin is admin page.<br>
-The server is located in the express directory.
+In this project, we have two single page applications that are made with reactjs.<br>
+The main page of the site is located in the reactjs directory and admin page in reactjs-admin directory and the server is located in the express directory.
 	
 ---  
 
@@ -43,6 +42,18 @@ npm run install
 ```bash
 npm run start
 ```
+After running the project, you must first create an admin. To do this, you must send a post request with body in the form below to "localhost:8080/auth/createAdmin".
+```json
+{
+	"username": "admin",
+	"firstName": "adminFirstName",
+	"lastName": "adminLastName",
+	"password": "0000000000",
+	"gender": "man",
+	"mobileNumber": "989999999999"
+}
+```
+After sending this request, this url only gives 404 error in response to requests.
 
 ---
 
